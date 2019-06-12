@@ -14,6 +14,10 @@
 		86EB9C5422B11681003F139D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86EB9C5222B11681003F139D /* LaunchScreen.storyboard */; };
 		86EB9C5F22B11681003F139D /* FIT3178_Final_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB9C5E22B11681003F139D /* FIT3178_Final_AppTests.swift */; };
 		86EB9C6A22B11681003F139D /* FIT3178_Final_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB9C6922B11681003F139D /* FIT3178_Final_AppUITests.swift */; };
+		86EB9C7822B12A78003F139D /* itineraryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB9C7722B12A78003F139D /* itineraryTableViewController.swift */; };
+		86EB9C7A22B133C5003F139D /* NewItineraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB9C7922B133C5003F139D /* NewItineraryViewController.swift */; };
+		86EB9C7C22B13E9D003F139D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB9C7B22B13E9D003F139D /* MapViewController.swift */; };
+		86EB9C7E22B1433E003F139D /* AddNewActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB9C7D22B1433E003F139D /* AddNewActivityViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		86EB9C6522B11681003F139D /* FIT3178 Final AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FIT3178 Final AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86EB9C6922B11681003F139D /* FIT3178_Final_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIT3178_Final_AppUITests.swift; sourceTree = "<group>"; };
 		86EB9C6B22B11681003F139D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86EB9C7722B12A78003F139D /* itineraryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itineraryTableViewController.swift; sourceTree = "<group>"; };
+		86EB9C7922B133C5003F139D /* NewItineraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItineraryViewController.swift; sourceTree = "<group>"; };
+		86EB9C7B22B13E9D003F139D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		86EB9C7D22B1433E003F139D /* AddNewActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewActivityViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +111,10 @@
 				86EB9C5022B11681003F139D /* Assets.xcassets */,
 				86EB9C5222B11681003F139D /* LaunchScreen.storyboard */,
 				86EB9C5522B11681003F139D /* Info.plist */,
+				86EB9C7722B12A78003F139D /* itineraryTableViewController.swift */,
+				86EB9C7922B133C5003F139D /* NewItineraryViewController.swift */,
+				86EB9C7B22B13E9D003F139D /* MapViewController.swift */,
+				86EB9C7D22B1433E003F139D /* AddNewActivityViewController.swift */,
 			);
 			path = "FIT3178 Final App";
 			sourceTree = "<group>";
@@ -256,7 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86EB9C7E22B1433E003F139D /* AddNewActivityViewController.swift in Sources */,
 				86EB9C4C22B11680003F139D /* ViewController.swift in Sources */,
+				86EB9C7822B12A78003F139D /* itineraryTableViewController.swift in Sources */,
+				86EB9C7A22B133C5003F139D /* NewItineraryViewController.swift in Sources */,
+				86EB9C7C22B13E9D003F139D /* MapViewController.swift in Sources */,
 				86EB9C4A22B11680003F139D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
