@@ -2,7 +2,7 @@
 //  MapViewController.swift
 //  FIT3178 Final App
 //
-//  Created by Sara Ong  on 13/06/2019.
+//  Created by Laoqi He  on 13/06/2019.
 //  Copyright © 2019 Laoqi He. All rights reserved.
 //
 

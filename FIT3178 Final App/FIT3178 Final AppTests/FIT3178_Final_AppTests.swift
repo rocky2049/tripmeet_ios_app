@@ -2,7 +2,7 @@
 //  FIT3178_Final_AppTests.swift
 //  FIT3178 Final AppTests
 //
-//  Created by Sara Ong  on 12/06/2019.
+//  Created by Laoqi He on 12/06/2019.
 //  Copyright © 2019 Laoqi He. All rights reserved.
 //
 
