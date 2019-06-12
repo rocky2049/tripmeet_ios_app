@@ -18,6 +18,7 @@
 		86EB9C7A22B133C5003F139D /* NewItineraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB9C7922B133C5003F139D /* NewItineraryViewController.swift */; };
 		86EB9C7C22B13E9D003F139D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB9C7B22B13E9D003F139D /* MapViewController.swift */; };
 		86EB9C7E22B1433E003F139D /* AddNewActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB9C7D22B1433E003F139D /* AddNewActivityViewController.swift */; };
+		86EB9C8022B1484B003F139D /* AccountSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB9C7F22B1484B003F139D /* AccountSettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		86EB9C7922B133C5003F139D /* NewItineraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItineraryViewController.swift; sourceTree = "<group>"; };
 		86EB9C7B22B13E9D003F139D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		86EB9C7D22B1433E003F139D /* AddNewActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewActivityViewController.swift; sourceTree = "<group>"; };
+		86EB9C7F22B1484B003F139D /* AccountSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				86EB9C7922B133C5003F139D /* NewItineraryViewController.swift */,
 				86EB9C7B22B13E9D003F139D /* MapViewController.swift */,
 				86EB9C7D22B1433E003F139D /* AddNewActivityViewController.swift */,
+				86EB9C7F22B1484B003F139D /* AccountSettingsViewController.swift */,
 			);
 			path = "FIT3178 Final App";
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				86EB9C7822B12A78003F139D /* itineraryTableViewController.swift in Sources */,
 				86EB9C7A22B133C5003F139D /* NewItineraryViewController.swift in Sources */,
 				86EB9C7C22B13E9D003F139D /* MapViewController.swift in Sources */,
+				86EB9C8022B1484B003F139D /* AccountSettingsViewController.swift in Sources */,
 				86EB9C4A22B11680003F139D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
