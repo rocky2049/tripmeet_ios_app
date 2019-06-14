@@ -13,6 +13,8 @@
 		865DD9CA22B35CAE00ADC967 /* DatabaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865DD9C922B35CAE00ADC967 /* DatabaseProtocol.swift */; };
 		865DD9CC22B35CF500ADC967 /* Itinerary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865DD9CB22B35CF500ADC967 /* Itinerary.swift */; };
 		865DD9CF22B35E7300ADC967 /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865DD9CE22B35E7300ADC967 /* MulticastDelegate.swift */; };
+		865DD9D122B3F23B00ADC967 /* ViewActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865DD9D022B3F23B00ADC967 /* ViewActivityViewController.swift */; };
+		865DD9D322B3F36D00ADC967 /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865DD9D222B3F36D00ADC967 /* ActivityTableViewCell.swift */; };
 		86EB9C4A22B11680003F139D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB9C4922B11680003F139D /* AppDelegate.swift */; };
 		86EB9C4C22B11680003F139D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB9C4B22B11680003F139D /* ViewController.swift */; };
 		86EB9C4F22B11680003F139D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86EB9C4D22B11680003F139D /* Main.storyboard */; };
@@ -57,6 +59,8 @@
 		865DD9C922B35CAE00ADC967 /* DatabaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseProtocol.swift; sourceTree = "<group>"; };
 		865DD9CB22B35CF500ADC967 /* Itinerary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Itinerary.swift; sourceTree = "<group>"; };
 		865DD9CE22B35E7300ADC967 /* MulticastDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulticastDelegate.swift; sourceTree = "<group>"; };
+		865DD9D022B3F23B00ADC967 /* ViewActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewActivityViewController.swift; sourceTree = "<group>"; };
+		865DD9D222B3F36D00ADC967 /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
 		86EB9C4622B11680003F139D /* FIT3178 Final App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FIT3178 Final App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86EB9C4922B11680003F139D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86EB9C4B22B11680003F139D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -169,8 +173,10 @@
 				86EB9C7B22B13E9D003F139D /* MapViewController.swift */,
 				86EB9C7D22B1433E003F139D /* AddNewActivityViewController.swift */,
 				86EB9C7F22B1484B003F139D /* AccountSettingsViewController.swift */,
+				865DD9D022B3F23B00ADC967 /* ViewActivityViewController.swift */,
 				86EB9C8322B17EAB003F139D /* Activity.swift */,
 				865DD9CB22B35CF500ADC967 /* Itinerary.swift */,
+				865DD9D222B3F36D00ADC967 /* ActivityTableViewCell.swift */,
 			);
 			path = "FIT3178 Final App";
 			sourceTree = "<group>";
@@ -432,8 +438,10 @@
 				86EB9C7E22B1433E003F139D /* AddNewActivityViewController.swift in Sources */,
 				86EB9C4C22B11680003F139D /* ViewController.swift in Sources */,
 				86EB9C7822B12A78003F139D /* itineraryTableViewController.swift in Sources */,
+				865DD9D322B3F36D00ADC967 /* ActivityTableViewCell.swift in Sources */,
 				865DD9CC22B35CF500ADC967 /* Itinerary.swift in Sources */,
 				865DD9CA22B35CAE00ADC967 /* DatabaseProtocol.swift in Sources */,
+				865DD9D122B3F23B00ADC967 /* ViewActivityViewController.swift in Sources */,
 				86EB9C7A22B133C5003F139D /* NewItineraryViewController.swift in Sources */,
 				86EB9C7C22B13E9D003F139D /* MapViewController.swift in Sources */,
 				86EB9C8022B1484B003F139D /* AccountSettingsViewController.swift in Sources */,
