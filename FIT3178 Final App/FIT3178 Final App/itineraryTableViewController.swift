@@ -9,58 +9,63 @@
 import UIKit
 
 class itineraryTableViewController: UITableViewController {
+    let SECTION_ACTIVITY = 0;
+    let CELL_ACTIVITY = "activityCell"
+    var currentItinerary: [Activity] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 1
     }
 
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath:
+        IndexPath) -> UITableViewCell {
+            let activityCell = tableView.dequeueReusableCell(withIdentifier: CELL_ACTIVITY,
+                                                          for: indexPath)
+                as! ActivityTableViewCell
+            let activity = currentItinerary[indexPath.row]
+            
+        activityCell.activityLabel.text = activity.name
+        activityCell.descriptionLabel.text = activity.location + formatDate(activityDate: activity.time)
+            
+        return activityCell
+        }
+    
 
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
+    
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
+    
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
     }
-    */
+        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         if segue.identifier == "ViewActivitySegue" {
+         let destination = segue.destination as! ViewActivityViewController
+         destination.activityDelegate = self
+            }
+        }
+    
 
     /*
     // Override to support rearranging the table view.
@@ -76,7 +81,42 @@ class itineraryTableViewController: UITableViewController {
         return true
     }
     */
-
+    //Formatting date values from activity class to string value
+    /***************************************************************************************
+     *    Title: Date format in swift
+     *    Author: LorenzOliveto
+     *    Date: 01/10/18 (originally posted 29/02/16)
+     *    Date retrieved: 15/06/19
+     *    Availability: https://stackoverflow.com/questions/35700281/date-format-in-swift
+     *
+     ***************************************************************************************/
+    func formatDate(activityDate: Date){
+     var newDateString:String = ""
+     let dateFormatterGet = DateFormatter()
+     dateFormatterGet.dateFormat = "yyyy-MM-dd HH:mm:ss"
+     let dateString = dateFormatterGet.string(from: activityDate)
+     let dateFormatterPrint = DateFormatter()
+     dateFormatterPrint.dateFormat = "MMM dd,yyyy"
+     if let date = dateFormatterGet.date(from: dateString) {
+      newDateString = dateFormatterPrint.string(from: date)
+     } else {
+        newDateString = "Error"
+     }
+      return newDateString
+    }
+        
+    func addActivity(newActivity: Activity) -> Bool {
+        currentItinerary.append(newActivity)
+        tableView.beginUpdates()
+        tableView.insertRows(at: [IndexPath(row: currentItinerary.count - 1, section:1)], with: .automatic)
+        tableView.endUpdates()
+        return false
+        }
+        
+        
+        
+     
+    
     /*
     // MARK: - Navigation
 
@@ -87,4 +127,5 @@ class itineraryTableViewController: UITableViewController {
     }
     */
 
-}
+
+    }}
