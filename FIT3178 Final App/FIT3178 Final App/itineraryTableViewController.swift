@@ -8,7 +8,7 @@
 
 import UIKit
 
-class itineraryTableViewController: UITableViewController {
+class itineraryTableViewController: UITableViewController, AddActivityDelegate {
     let SECTION_ACTIVITY = 0;
     let CELL_ACTIVITY = "activityCell"
     var currentItinerary: [Activity] = []
@@ -38,7 +38,8 @@ class itineraryTableViewController: UITableViewController {
             let activity = currentItinerary[indexPath.row]
             
         activityCell.activityLabel.text = activity.name
-        activityCell.descriptionLabel.text = activity.location + formatDate(activityDate: activity.time)
+        var timeString = formatDate(activityDate:activity.time)
+        activityCell.descriptionLabel.text = timeString  + activity.location
             
         return activityCell
         }
@@ -53,10 +54,11 @@ class itineraryTableViewController: UITableViewController {
 
     
     // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
             tableView.deleteRows(at: [indexPath], with: .fade)
+    }
     }
         
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -91,14 +93,13 @@ class itineraryTableViewController: UITableViewController {
      *
      ***************************************************************************************/
     func formatDate(activityDate: Date){
-     var newDateString:String = ""
      let dateFormatterGet = DateFormatter()
      dateFormatterGet.dateFormat = "yyyy-MM-dd HH:mm:ss"
      let dateString = dateFormatterGet.string(from: activityDate)
      let dateFormatterPrint = DateFormatter()
-     dateFormatterPrint.dateFormat = "MMM dd,yyyy"
+        dateFormatterPrint.dateFormat = "HH:mma"
      if let date = dateFormatterGet.date(from: dateString) {
-      newDateString = dateFormatterPrint.string(from: date)
+      let newDateString = dateFormatterPrint.string(from: date)
      } else {
         newDateString = "Error"
      }
@@ -112,11 +113,6 @@ class itineraryTableViewController: UITableViewController {
         tableView.endUpdates()
         return false
         }
-        
-        
-        
-     
-    
     /*
     // MARK: - Navigation
 
@@ -126,6 +122,4 @@ class itineraryTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
-
-    }}
+    }

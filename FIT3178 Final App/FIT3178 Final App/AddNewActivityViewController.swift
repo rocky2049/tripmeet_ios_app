@@ -9,6 +9,9 @@
 import UIKit
 
 class AddNewActivityViewController: UIViewController {
+    
+    weak var activityDelegate: AddActivityDelegate?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
