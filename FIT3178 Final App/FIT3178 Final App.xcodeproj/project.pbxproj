@@ -3,12 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		57343FED38AD0E9F8FC76DA2 /* Pods_FIT3178_Final_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E719F8244DE22083C12607AF /* Pods_FIT3178_Final_AppUITests.framework */; };
 		5C66DEC180CA8BCB2E0FC907 /* Pods_FIT3178_Final_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A842DD155B722391FF2FEFFB /* Pods_FIT3178_Final_App.framework */; };
+		865DD9C822B3362700ADC967 /* FirebaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865DD9C722B3362700ADC967 /* FirebaseController.swift */; };
+		865DD9CA22B35CAE00ADC967 /* DatabaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865DD9C922B35CAE00ADC967 /* DatabaseProtocol.swift */; };
+		865DD9CC22B35CF500ADC967 /* Itinerary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865DD9CB22B35CF500ADC967 /* Itinerary.swift */; };
+		865DD9CF22B35E7300ADC967 /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865DD9CE22B35E7300ADC967 /* MulticastDelegate.swift */; };
 		86EB9C4A22B11680003F139D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB9C4922B11680003F139D /* AppDelegate.swift */; };
 		86EB9C4C22B11680003F139D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB9C4B22B11680003F139D /* ViewController.swift */; };
 		86EB9C4F22B11680003F139D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86EB9C4D22B11680003F139D /* Main.storyboard */; };
@@ -49,6 +53,10 @@
 		5CFF069999DC071FD624F632 /* Pods-FIT3178 Final AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FIT3178 Final AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-FIT3178 Final AppUITests/Pods-FIT3178 Final AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6527420F36F476E2AC6194F7 /* Pods-FIT3178 Final AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FIT3178 Final AppTests.debug.xcconfig"; path = "Target Support Files/Pods-FIT3178 Final AppTests/Pods-FIT3178 Final AppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		845F3F27566DEC29EF45F4A3 /* Pods-FIT3178 Final AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FIT3178 Final AppUITests.release.xcconfig"; path = "Target Support Files/Pods-FIT3178 Final AppUITests/Pods-FIT3178 Final AppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		865DD9C722B3362700ADC967 /* FirebaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseController.swift; sourceTree = "<group>"; };
+		865DD9C922B35CAE00ADC967 /* DatabaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseProtocol.swift; sourceTree = "<group>"; };
+		865DD9CB22B35CF500ADC967 /* Itinerary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Itinerary.swift; sourceTree = "<group>"; };
+		865DD9CE22B35E7300ADC967 /* MulticastDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulticastDelegate.swift; sourceTree = "<group>"; };
 		86EB9C4622B11680003F139D /* FIT3178 Final App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FIT3178 Final App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86EB9C4922B11680003F139D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86EB9C4B22B11680003F139D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +121,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		865DD9CD22B35D6000ADC967 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				865DD9C722B3362700ADC967 /* FirebaseController.swift */,
+				865DD9C922B35CAE00ADC967 /* DatabaseProtocol.swift */,
+				865DD9CE22B35E7300ADC967 /* MulticastDelegate.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		86EB9C3D22B11680003F139D = {
 			isa = PBXGroup;
 			children = (
@@ -138,19 +156,21 @@
 		86EB9C4822B11680003F139D /* FIT3178 Final App */ = {
 			isa = PBXGroup;
 			children = (
-				86EB9C8122B17E64003F139D /* GoogleService-Info.plist */,
+				865DD9CD22B35D6000ADC967 /* Database */,
 				86EB9C4922B11680003F139D /* AppDelegate.swift */,
 				86EB9C4B22B11680003F139D /* ViewController.swift */,
 				86EB9C4D22B11680003F139D /* Main.storyboard */,
 				86EB9C5022B11681003F139D /* Assets.xcassets */,
 				86EB9C5222B11681003F139D /* LaunchScreen.storyboard */,
 				86EB9C5522B11681003F139D /* Info.plist */,
+				86EB9C8122B17E64003F139D /* GoogleService-Info.plist */,
 				86EB9C7722B12A78003F139D /* itineraryTableViewController.swift */,
 				86EB9C7922B133C5003F139D /* NewItineraryViewController.swift */,
 				86EB9C7B22B13E9D003F139D /* MapViewController.swift */,
 				86EB9C7D22B1433E003F139D /* AddNewActivityViewController.swift */,
 				86EB9C7F22B1484B003F139D /* AccountSettingsViewController.swift */,
 				86EB9C8322B17EAB003F139D /* Activity.swift */,
+				865DD9CB22B35CF500ADC967 /* Itinerary.swift */,
 			);
 			path = "FIT3178 Final App";
 			sourceTree = "<group>";
@@ -197,6 +217,7 @@
 				86EB9C4222B11680003F139D /* Sources */,
 				86EB9C4322B11680003F139D /* Frameworks */,
 				86EB9C4422B11680003F139D /* Resources */,
+				74B05171B93D9DD7464149B5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -361,6 +382,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		74B05171B93D9DD7464149B5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FIT3178 Final App/Pods-FIT3178 Final App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FIT3178 Final App/Pods-FIT3178 Final App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FIT3178 Final App/Pods-FIT3178 Final App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D09997886026ED8DD2758E11 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -390,14 +428,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				865DD9C822B3362700ADC967 /* FirebaseController.swift in Sources */,
 				86EB9C7E22B1433E003F139D /* AddNewActivityViewController.swift in Sources */,
 				86EB9C4C22B11680003F139D /* ViewController.swift in Sources */,
 				86EB9C7822B12A78003F139D /* itineraryTableViewController.swift in Sources */,
+				865DD9CC22B35CF500ADC967 /* Itinerary.swift in Sources */,
+				865DD9CA22B35CAE00ADC967 /* DatabaseProtocol.swift in Sources */,
 				86EB9C7A22B133C5003F139D /* NewItineraryViewController.swift in Sources */,
 				86EB9C7C22B13E9D003F139D /* MapViewController.swift in Sources */,
 				86EB9C8022B1484B003F139D /* AccountSettingsViewController.swift in Sources */,
 				86EB9C8422B17EAB003F139D /* Activity.swift in Sources */,
 				86EB9C4A22B11680003F139D /* AppDelegate.swift in Sources */,
+				865DD9CF22B35E7300ADC967 /* MulticastDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
