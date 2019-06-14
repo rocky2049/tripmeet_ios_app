@@ -13,10 +13,10 @@ class Itinerary: NSObject {
     var name: String
     var activities: [Activity]
     
-    init(id: String, name: String, activities: [Activity]){
-        self.id = ""
-        self.name = ""
-        self.activities = []
+    init(id: String = "", name: String = "", activities: [Activity] = []){
+        self.id = id
+        self.name = name
+        self.activities = activities
     }
 }
 

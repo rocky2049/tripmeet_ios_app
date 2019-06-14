@@ -15,12 +15,12 @@ class Activity: NSObject {
     var location: String
     var time: Date
     
-    init(id: String, name: String, desc: String, time: Date){
-        self.id = ""
-        self.name = ""
-        self.desc = ""
-        self.location = ""
-        self.time = Date()
+    init(id: String = "", name: String = "", desc: String = "", location: String = "", time: Date = Date()){
+        self.id = id
+        self.name = name
+        self.desc = desc
+        self.location = location
+        self.time = time
     }
 
 }
