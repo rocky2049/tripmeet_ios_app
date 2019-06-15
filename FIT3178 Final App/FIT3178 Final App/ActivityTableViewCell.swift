@@ -13,11 +13,15 @@ class ActivityTableViewCell: UITableViewCell {
     @IBOutlet weak var activityLabel: UILabel!
     
     @IBOutlet weak var descriptionLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
+    @IBAction func viewDetails(_ sender: Any) {
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

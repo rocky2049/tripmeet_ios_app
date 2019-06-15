@@ -112,6 +112,7 @@
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYT-Xg-ors">
                                             <rect key="frame" x="321" y="24" width="22" height="22"/>
                                             <connections>
+                                                <action selector="viewDetails:" destination="n41-QO-abA" eventType="touchUpInside" id="MeS-4j-XXN"/>
                                                 <segue destination="07g-Vz-mPh" kind="show" identifier="viewActivitySegue" id="0ug-eY-wiR"/>
                                             </connections>
                                         </button>
@@ -146,7 +147,7 @@
                     <toolbarItems>
                         <barButtonItem title="+ Add New Activty" id="ju5-i8-rbW">
                             <connections>
-                                <segue destination="Q3H-Q9-DCk" kind="show" id="0xh-Dt-dkD"/>
+                                <segue destination="Q3H-Q9-DCk" kind="show" identifier="addActivitySegue" id="0xh-Dt-dkD"/>
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
@@ -200,18 +201,22 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pQ0-9H-2p7">
-                                <rect key="frame" x="55" y="111" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pQ0-9H-2p7">
+                                <rect key="frame" x="0.0" y="39" width="375" height="348"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pQ0-9H-2p7" firstAttribute="trailing" secondItem="Mn3-NP-iHL" secondAttribute="trailing" id="F3M-ce-4t5"/>
+                            <constraint firstItem="pQ0-9H-2p7" firstAttribute="leading" secondItem="Mn3-NP-iHL" secondAttribute="leading" id="eoh-dL-3pH"/>
+                            <constraint firstItem="pQ0-9H-2p7" firstAttribute="top" secondItem="Mn3-NP-iHL" secondAttribute="top" constant="16" id="prq-Gv-a1Q"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Mn3-NP-iHL"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qiz-Uk-Piy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1409" y="-640"/>
+            <point key="canvasLocation" x="1408.8" y="-640.02998500749629"/>
         </scene>
         <!--AddNewActivity-->
         <scene sceneID="756-ey-m9f">
@@ -336,13 +341,69 @@
                     <view key="view" contentMode="scaleToFill" id="YgM-Gp-vor">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKC-qs-Fwb">
+                                <rect key="frame" x="166" y="220" width="42" height="30"/>
+                                <state key="normal" title="About"/>
+                                <connections>
+                                    <segue destination="04z-SQ-lJz" kind="show" id="wSe-M1-phM"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Gr2-hk-15P" firstAttribute="trailing" secondItem="ZKC-qs-Fwb" secondAttribute="trailing" constant="167" id="78O-u2-lSx"/>
+                            <constraint firstItem="ZKC-qs-Fwb" firstAttribute="top" secondItem="Gr2-hk-15P" secondAttribute="top" constant="200" id="KrV-bf-ZKY"/>
+                            <constraint firstItem="ZKC-qs-Fwb" firstAttribute="leading" secondItem="Gr2-hk-15P" secondAttribute="leading" constant="166" id="oF0-Ok-jYS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Gr2-hk-15P"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aTl-WR-KES" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1409" y="1452"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ATv-CB-gmH">
+            <objects>
+                <viewController id="04z-SQ-lJz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kNU-8D-0tL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="27r-Pu-UfL">
+                                <rect key="frame" x="40" y="162" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">MapkitFirebaseUIKit</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KSs-30-QOS">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="About" id="BuT-1M-xVE"/>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Libraries and Frameworks used:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNI-6c-1tz">
+                                <rect key="frame" x="36" y="133" width="244" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RNI-6c-1tz" firstAttribute="leading" secondItem="gdW-Dn-jQ5" secondAttribute="leading" constant="40" id="0nO-fw-Yu8"/>
+                            <constraint firstItem="RNI-6c-1tz" firstAttribute="top" secondItem="gdW-Dn-jQ5" secondAttribute="top" constant="20" id="hNa-6y-lH7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gdW-Dn-jQ5"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hTP-Br-i1E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2143" y="1451"/>
         </scene>
         <!--CreateNewItinerary-->
         <scene sceneID="5QV-c9-tWr">
@@ -437,6 +498,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="OqM-0k-1uR"/>
+        <segue reference="0xh-Dt-dkD"/>
+        <segue reference="mld-sI-FI8"/>
     </inferredMetricsTieBreakers>
 </document>

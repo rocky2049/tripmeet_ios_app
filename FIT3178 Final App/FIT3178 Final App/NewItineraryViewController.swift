@@ -9,6 +9,8 @@
 import UIKit
 
 class NewItineraryViewController: UIViewController {
+    
+    weak var itineraryDelegate: AddItineraryDelegate?
     @IBOutlet weak var nameTextField: UITextField!
     
     @IBOutlet weak var startDatePicker: UIDatePicker!
@@ -19,7 +21,8 @@ class NewItineraryViewController: UIViewController {
         let name = nameTextField.text!
         let startDate = startDatePicker.date
         let endDate = endDatePicker.date
-        let itinerary = Itinerary(name: name, activities: [])
+        let itinerary = Itinerary(name: name, startDate: startDate, endDate: endDate, activities: [])
+        let _ = itineraryDelegate!.addItinerary(newItinerary: itinerary)
     }
     override func viewDidLoad() {
         super.viewDidLoad()

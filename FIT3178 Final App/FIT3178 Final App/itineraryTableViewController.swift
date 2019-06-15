@@ -62,8 +62,8 @@ class itineraryTableViewController: UITableViewController, AddActivityDelegate {
     }
         
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         if segue.identifier == "ViewActivitySegue" {
-         let destination = segue.destination as! ViewActivityViewController
+         if segue.identifier == "AddActivitySegue" {
+         let destination = segue.destination as! AddNewActivityViewController
          destination.activityDelegate = self
             }
         }

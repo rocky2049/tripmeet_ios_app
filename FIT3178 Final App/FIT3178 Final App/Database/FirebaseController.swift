@@ -143,7 +143,7 @@ class FirebaseController: NSObject, DatabaseProtocol{
     }
     
     func addActivity(name: String, desc: String, location: String, time: Date) -> Activity {
-        let activity = Activity()
+        let activity = Activity(name: name, desc: desc, location: location, time: time)
         let id = activitiesRef?.addDocument(data: ["name" : name, "desc" : desc, "location" : location, "time" : time])
         activity.name = name
         activity.desc = desc
