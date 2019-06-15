@@ -101,7 +101,7 @@ class itineraryTableViewController: UITableViewController, AddActivityDelegate {
      if let date = dateFormatterGet.date(from: dateString) {
       let newDateString = dateFormatterPrint.string(from: date)
      } else {
-        newDateString = "Error"
+      let newDateString = "Error"
      }
       return newDateString
     }
@@ -111,7 +111,7 @@ class itineraryTableViewController: UITableViewController, AddActivityDelegate {
         tableView.beginUpdates()
         tableView.insertRows(at: [IndexPath(row: currentItinerary.count - 1, section:1)], with: .automatic)
         tableView.endUpdates()
-        return false
+        return true
         }
     /*
     // MARK: - Navigation

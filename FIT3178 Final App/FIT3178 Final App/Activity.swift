@@ -14,9 +14,9 @@ class Activity: NSObject {
     var desc: String
     var location: String
     var time: Date
-    
-    init(id: String = "", name: String = "", desc: String = "", location: String = "", time: Date = Date()){
-        self.id = id
+    var uuid = UUID.init()
+    init(name: String = "", desc: String = "", location: String = "", time: Date){
+        self.id = uuid.uuidString
         self.name = name
         self.desc = desc
         self.location = location
