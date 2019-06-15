@@ -16,6 +16,7 @@
 		865DD9D122B3F23B00ADC967 /* ViewActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865DD9D022B3F23B00ADC967 /* ViewActivityViewController.swift */; };
 		865DD9D322B3F36D00ADC967 /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865DD9D222B3F36D00ADC967 /* ActivityTableViewCell.swift */; };
 		865DD9D522B42F0D00ADC967 /* AddActivityDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865DD9D422B42F0D00ADC967 /* AddActivityDelegate.swift */; };
+		865DD9D722B4D02200ADC967 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865DD9D622B4D02200ADC967 /* Location.swift */; };
 		86EB9C4A22B11680003F139D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB9C4922B11680003F139D /* AppDelegate.swift */; };
 		86EB9C4C22B11680003F139D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB9C4B22B11680003F139D /* ViewController.swift */; };
 		86EB9C4F22B11680003F139D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86EB9C4D22B11680003F139D /* Main.storyboard */; };
@@ -63,6 +64,7 @@
 		865DD9D022B3F23B00ADC967 /* ViewActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewActivityViewController.swift; sourceTree = "<group>"; };
 		865DD9D222B3F36D00ADC967 /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
 		865DD9D422B42F0D00ADC967 /* AddActivityDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityDelegate.swift; sourceTree = "<group>"; };
+		865DD9D622B4D02200ADC967 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		86EB9C4622B11680003F139D /* FIT3178 Final App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FIT3178 Final App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86EB9C4922B11680003F139D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86EB9C4B22B11680003F139D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				865DD9CB22B35CF500ADC967 /* Itinerary.swift */,
 				865DD9D222B3F36D00ADC967 /* ActivityTableViewCell.swift */,
 				865DD9D422B42F0D00ADC967 /* AddActivityDelegate.swift */,
+				865DD9D622B4D02200ADC967 /* Location.swift */,
 			);
 			path = "FIT3178 Final App";
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 			files = (
 				865DD9C822B3362700ADC967 /* FirebaseController.swift in Sources */,
 				865DD9D522B42F0D00ADC967 /* AddActivityDelegate.swift in Sources */,
+				865DD9D722B4D02200ADC967 /* Location.swift in Sources */,
 				86EB9C7E22B1433E003F139D /* AddNewActivityViewController.swift in Sources */,
 				86EB9C4C22B11680003F139D /* ViewController.swift in Sources */,
 				86EB9C7822B12A78003F139D /* itineraryTableViewController.swift in Sources */,

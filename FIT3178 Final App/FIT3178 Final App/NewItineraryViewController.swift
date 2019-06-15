@@ -9,7 +9,18 @@
 import UIKit
 
 class NewItineraryViewController: UIViewController {
-
+    @IBOutlet weak var nameTextField: UITextField!
+    
+    @IBOutlet weak var startDatePicker: UIDatePicker!
+    
+    @IBOutlet weak var endDatePicker: UIDatePicker!
+    
+    @IBAction func createItinerary(_ sender: Any) {
+        let name = nameTextField.text!
+        let startDate = startDatePicker.date
+        let endDate = endDatePicker.date
+        let itinerary = Itinerary(name: name, activities: [])
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

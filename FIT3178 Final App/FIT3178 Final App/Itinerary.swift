@@ -12,9 +12,10 @@ class Itinerary: NSObject {
     var id: String
     var name: String
     var activities: [Activity]
+    var uuid = UUID.init()
     
-    init(id: String = "", name: String = "", activities: [Activity] = []){
-        self.id = id
+    init(name: String = "", activities: [Activity] = []){
+        self.id = uuid.uuidString
         self.name = name
         self.activities = activities
     }
